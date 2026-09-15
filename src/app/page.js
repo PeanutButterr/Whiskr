@@ -94,7 +94,7 @@ export default function Home() {
     return (
       <main className="auth-shell signed-in-shell">
         <div className="welcome-panel">
-          <div className="brand-mark" aria-hidden="true">w</div>
+          <img className="brand-logo" src="/whiskr-logo.png" alt="Whiskr" />
           <p className="eyebrow">You are in</p>
           <h1>Welcome home, {user.name.split(" ")[0]}.</h1>
           <p className="welcome-copy">Your corner of the internet for curious cats, cozy conversations, and very important naps.</p>
@@ -107,7 +107,7 @@ export default function Home() {
   return (
     <main className="auth-shell">
       <section className="brand-panel">
-        <div className="brand-lockup"><span className="brand-mark" aria-hidden="true">w</span><span>whiskr</span></div>
+        <div className="brand-lockup"><img className="brand-logo" src="/whiskr-logo.png" alt="Whiskr" /><span>whiskr</span></div>
         <div className="brand-story">
           <p className="eyebrow">A softer social network</p>
           <h1>Find your people.<br /><em>Follow the purr.</em></h1>
