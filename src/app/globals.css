@@ -1,26 +1,144 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif; /* Standard modern font */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Main Container: 50/50 Split */
+.auth-container {
+  display: flex;
+  height: 100vh;
+  background-color: #080705;
+  color: white;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Left Panel */
+.auth-left {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Replace with your actual AI generated image URL */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1620641788415-62341e0ed56d?q=80&w=1000&auto=format&fit=crop') center/cover;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.left-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.left-content p {
+  color: #C1CDCE;
+}
+
+/* Right Panel */
+.auth-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.auth-right h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Toggle Buttons */
+.toggle-wrapper {
+  margin-bottom: 40px;
+}
+
+.toggle-buttons {
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
+  padding: 5px;
+}
+
+.toggle-buttons button {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-buttons button.active {
+  background: #F88C06;
+  color: #080705;
+  font-weight: bold;
+}
+
+/* Form Styles */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  gap: 15px;
+}
+
+.name-inputs {
+  display: flex;
+  gap: 15px;
+}
+
+.name-inputs input {
+  width: 50%;
+}
+
+input {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 12px;
+  color: white;
+  outline: none;
+  transition: border 0.3s;
+}
+
+input:focus {
+  border-color: #F88C06;
+}
+
+/* Submit Button */
+.submit-btn {
+  background: #F88C06;
+  color: #080705;
+  border: none;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: opacity 0.3s;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  .auth-left, .auth-right {
+    width: 100%;
+  }
+  .auth-left {
+    height: 40vh;
+    border-radius: 0 0 40px 40px;
+  }
 }
