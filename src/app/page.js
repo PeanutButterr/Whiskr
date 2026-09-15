@@ -26,13 +26,7 @@ export default function AuthPage() {
   return (
     <div className="auth-container">
       {/* Left Panel: Visuals */}
-      <div className="auth-left">
-        <div className="brand">Whiskrs</div>
-        <div className="left-content">
-          <h2>Find Your People</h2>
-          <p>Whiskr is a warm, little place for cat people.</p>
-        </div>
-      </div>
+      <div className="auth-left" aria-label="Whiskr cat paws background" />
 
       {/* Right Panel: Form */}
       <div className="auth-right">
