@@ -27,10 +27,12 @@ export default function AuthPage() {
     <div className="auth-container">
       {/* Left Panel: Visuals */}
       <div className="auth-left">
-        <div className="brand">NeuroFox</div>
-        <div className="left-content">
-          <h2>Create Your Vision</h2>
-          <p>AI-assisted workspace to craft and elevate your ideas.</p>
+        <div className="brand">Whiskrs</div>
+        <div className="center-content">
+          <h2>A Softer Place</h2>
+          <p>Follow the purr.</p>
+          <p>Whiskr is a warm, little place for cat people</p>
+          <p>and the cats that tolerate them.</p>
         </div>
       </div>
 
