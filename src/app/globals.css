@@ -16,6 +16,7 @@
 
 /* Left Panel */
 .auth-left {
+  position: relative;
   width: 50%;
   padding: 40px;
   display: flex;
@@ -26,12 +27,25 @@
   border-bottom-right-radius: 40px;
 }
 
-.left-content h2 {
+.brand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  color: white;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-shadow: 0 3px 16px rgba(0, 0, 0, 0.45);
+  transform: translate(-50%, -50%);
+}
+
+.center-content h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
-.left-content p {
+.center-content p {
   color: #C1CDCE;
 }
 
