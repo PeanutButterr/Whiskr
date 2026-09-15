@@ -7,8 +7,7 @@ export default function AuthPage() {
 
   // Form state to eventually send to your Node/Express backend
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    username: '',
     email: '',
     password: '',
     confirmPassword: ''
@@ -58,10 +57,7 @@ export default function AuthPage() {
 
         <form className="auth-form" onSubmit={handleSubmit}>
           {isSignUp && (
-            <div className="name-inputs">
-              <input type="text" name="firstName" placeholder="First Name" onChange={handleChange} />
-              <input type="text" name="lastName" placeholder="Last Name" onChange={handleChange} />
-            </div>
+            <input type="text" name="username" placeholder="Username" onChange={handleChange} />
           )}
           
           <input type="email" name="email" placeholder="Enter Your Email" onChange={handleChange} />
